@@ -5,15 +5,18 @@ public class Main {
 
         Nodo root= new Nodo(1);
 
-        Nodo leftChild = new Nodo(2);
-        Nodo rightChild = new Nodo(3);
-        root.setLeft(leftChild);
-        root.setRght(rightChild);
+        Nodo left = new Nodo(2);
+        Nodo right = new Nodo(3);
+        root.setLeft(left);
+        root.setRght(right);
 
-        Nodo leftLeftChild = new Nodo(4);
-        Nodo leftRightChild = new Nodo(5);
-        leftChild.setLeft(leftLeftChild);
-        leftChild.setRght(leftRightChild);
+        root.left.left = new Nodo(4);
+        root.left.rght = new Nodo(5);
+
+        root.rght.rght = new Nodo(6);
+
+        root.left.left.left = new Nodo(7);
+        root.left.right.left =new Nodo(8);
 
         subTittle("IN-ORDER TRANSVERSAL: ");
         BinaryTreeTraversals.inOrderTraversal(root);
